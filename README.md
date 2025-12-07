@@ -3,3 +3,6 @@
 م.م محمد مصطفى حسين الامارة
 
 إحصائي اقدم/ المديرية العامة للتربية في محافظة البصرة
+
+التعليم الثانوي 
+[[https://github.com/mohammed-alemara/Statistical-notebook/raw/refs/heads/main/s2.xlsx]]
