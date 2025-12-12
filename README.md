@@ -12,4 +12,5 @@
 ## روابط الاستمارات
 التعليم الثانوي 
 
-https://ee-eu.kobotoolbox.org/x/Tw4MG8q6
+https://github.com/mohammed-alemara/Statistical-notebook/raw/refs/heads/main/s2.xlsx
+
