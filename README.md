@@ -10,7 +10,7 @@
 
 ---
 ## روابط الاستمارات
-التعليم الثانوي 
+ 
 |LINK|REMARK|
 | --- | --- |
 |   https://github.com/mohammed-alemara/Statistical-notebook/raw/refs/heads/main/s2.xlsx  | التعليم الثانوي|
