@@ -11,3 +11,8 @@
 يمكن التواصل معي في حالة وجود اي استفسار 07846443377
 
 ---
+
+|     |     |
+| --- | --- |
+|   https://github.com/mohammed-alemara/Statistical-notebook/raw/refs/heads/main/s2.xlsx  |     |
+
