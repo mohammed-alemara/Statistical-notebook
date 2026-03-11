@@ -1,0 +1,25 @@
+Sub ConvertTextToNumbers_AllColumns()
+    Dim ws As Worksheet
+    Dim rng As Range
+    Dim cell As Range
+    
+    ' اختر الورقة الحالية
+    Set ws = ActiveSheet
+    
+    ' تحديد كل الخلايا المستخدمة
+    Set rng = ws.UsedRange
+    
+    Application.ScreenUpdating = False
+    
+    ' حلقة لكل خلية
+    For Each cell In rng
+        ' تحقق أن الخلية ليست فارغة وأنها نص رقمي
+        If IsNumeric(cell.Value) And VarType(cell.Value) = vbString Then
+            cell.Value = cell.Value * 1 ' تحويلها إلى رقم
+        End If
+    Next cell
+    
+    Application.ScreenUpdating = True
+    
+    MsgBox "تم تحويل كل النصوص الرقمية إلى أرقام بنجاح!", vbInformation
+End Sub
