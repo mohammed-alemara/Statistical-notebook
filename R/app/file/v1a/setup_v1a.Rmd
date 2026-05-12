@@ -1,0 +1,17 @@
+```{r setup_v1a, include=FALSE}
+#التربية الخاصة
+
+```
+
+```{r, child='table_v1a_1.Rmd'}
+```
+
+```{r, child='table_v1a_2.Rmd'}
+```
+
+```{r, child='table_v1a_3.Rmd'}
+```
+
+```{r, child='table_v1a_4.Rmd'}
+```
+
