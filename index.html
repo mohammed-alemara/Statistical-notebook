@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الكراس الاحصائي</title>
-  <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
@@ -268,11 +267,14 @@
       const loader = document.getElementById('loader');
       loader.classList.add('hidden');
 
-      // تسجيل Service Worker للعمل بدون إنترنت
+      // إلغاء تسجيل أي Service Worker نشط لتعطيل خاصية الـ Offline نهائياً
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(reg => console.log('Service Worker Registered'))
-          .catch(err => console.error('Service Worker registration failed', err));
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+            console.log('Service Worker Unregistered');
+          }
+        });
       }
     });
   </script>
