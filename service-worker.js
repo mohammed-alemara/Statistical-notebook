@@ -1,5 +1,6 @@
-const CACHE_NAME = 'statistical-notebook-v1';
+const CACHE_NAME = 'statistical-notebook-v2'; // تغيير الإصدار عند التحديث
 const assetsToCache = [
+  './',       // تخزين الرابط الرئيسي
   'index.html',
   'manifest.json',
   'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap',
@@ -11,6 +12,7 @@ const assetsToCache = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
+      console.log('Caching assets...');
       return cache.addAll(assetsToCache);
     })
   );
@@ -34,5 +36,6 @@ self.addEventListener('activate', event => {
             .map(key => caches.delete(key))
       );
     })
+    .then(() => self.clients.claim()) // تفعيل التحكم في الصفحات المفتوحة فوراً
   );
 });
