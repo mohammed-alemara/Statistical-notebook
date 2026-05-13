@@ -55,25 +55,23 @@
       border-radius: 30px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.6);
-      max-width: 400px;
+      max-width: 550px;
       width: 90%;
       text-align: center;
-      margin: 20px auto;
+      margin: 10px auto;
+      padding: 25px 20px;
     }
 
     .header-box {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .logo {
-      width: 350px;
+      width: 400px;
       max-width: 100%;
       height: auto;
       margin-bottom: 20px;
-      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
     }
-    .logo:hover { transform: scale(1.05); }
 
     h2 {
       margin: 15px 0 5px 0;
@@ -91,14 +89,14 @@
     }
 
     .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
     }
 
     .button {
       color: white;
-      padding: 10px 15px;
+      padding: 12px 10px;
       text-decoration: none;
       border-radius: 15px;
       font-size: 14px;
@@ -167,21 +165,27 @@
     .btn-secondary { background: linear-gradient(45deg, #2980b9, #3498db); box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3); animation-delay: 0.6s; }
     .btn-secondary:hover { background: linear-gradient(45deg, #2471a3, #2980b9); box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4); }
 
+    .btn-vocational { background: linear-gradient(45deg, #8e44ad, #9b59b6); box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3); animation-delay: 0.8s; }
+    .btn-vocational:hover { background: linear-gradient(45deg, #71338a, #8e44ad); box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4); }
+
+    .btn-institutes { background: linear-gradient(45deg, #c0392b, #e74c3c); box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3); animation-delay: 1.0s; grid-column: span 2; }
+    .btn-institutes:hover { background: linear-gradient(45deg, #a93226, #c0392b); box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4); }
+
     .button:active {
       transform: translateY(-1px);
     }
 
     .footer-text {
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 0.8rem;
-      color: #95a5a6;
+      color: #b0bec5; /* لون باهت واحترافي */
       border-top: 1px solid rgba(0, 0, 0, 0.05);
-      padding-top: 20px;
+      padding-top: 15px;
       line-height: 1.8;
       position: relative;
     }
     .designer-name {
-      color: var(--primary-color);
+      color: #90a4ae; /* جعل اسم المصمم باهتًا ليتناسق مع الفوتر */
       font-weight: 700;
     }
 
@@ -241,10 +245,18 @@
         <i class="fas fa-graduation-cap"></i>
         المدارس الثانوية
       </a>
+      <a class="button btn-vocational" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+        <i class="fas fa-tools"></i>
+        المهني
+      </a>
+      <a class="button btn-institutes" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+        <i class="fas fa-university"></i>
+        المعاهد
+      </a>
     </div>
 
     <div class="footer-text">
-      © 2026 جميع الحقوق محفوظة
+      © جميع الحقوق محفوظة للمديرية العامة للتربية في محافظة النجف الاشرف
       <br>
       مصمم النظام: <span class="designer-name">م.م محمد مصطفى الامارة</span>
     </div>
