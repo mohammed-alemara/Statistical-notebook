@@ -51,7 +51,7 @@
       background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
-      padding: 40px 30px;
+      padding: 25px 20px; /* تم دمج تعاريف الـ padding */
       border-radius: 30px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
       border: 1px solid rgba(255, 255, 255, 0.6);
@@ -59,15 +59,10 @@
       width: 90%;
       text-align: center;
       margin: 10px auto;
-      padding: 25px 20px;
-    }
-
-    .header-box {
-      margin-bottom: 20px;
     }
 
     .logo {
-      width: 400px;
+      width: 100%; /* اجعل العرض يتناسب مع الحاوية */
       max-width: 100%;
       height: auto;
       margin-bottom: 20px;
@@ -237,19 +232,19 @@
         <i class="fas fa-child"></i>
         رياض أطفال
       </a>
-      <a class="button btn-primary" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+      <a class="button btn-primary" href="https://ee-eu.kobotoolbox.org/x/PRIMARY_FORM_URL">
         <i class="fas fa-book-open"></i>
         المدارس الابتدائية
       </a>
-      <a class="button btn-secondary" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+      <a class="button btn-secondary" href="https://ee-eu.kobotoolbox.org/x/SECONDARY_FORM_URL">
         <i class="fas fa-graduation-cap"></i>
         المدارس الثانوية
       </a>
-      <a class="button btn-vocational" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+      <a class="button btn-vocational" href="https://ee-eu.kobotoolbox.org/x/VOCATIONAL_FORM_URL">
         <i class="fas fa-tools"></i>
         المهني
       </a>
-      <a class="button btn-institutes" href="https://ee-eu.kobotoolbox.org/x/ZL8qNjZV">
+      <a class="button btn-institutes" href="https://ee-eu.kobotoolbox.org/x/INSTITUTES_FORM_URL">
         <i class="fas fa-university"></i>
         المعاهد
       </a>
@@ -266,16 +261,6 @@
     window.addEventListener('load', function() {
       const loader = document.getElementById('loader');
       loader.classList.add('hidden');
-
-      // إلغاء تسجيل أي Service Worker نشط لتعطيل خاصية الـ Offline نهائياً
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-          for(let registration of registrations) {
-            registration.unregister();
-            console.log('Service Worker Unregistered');
-          }
-        });
-      }
     });
   </script>
 </body>
