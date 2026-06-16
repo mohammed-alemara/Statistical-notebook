@@ -1,3 +1,4 @@
+Attribute VB_Name = "Module1"
 Function CleanSchoolName(ByVal txt As String) As String
     Dim i As Long
     Dim char As String
@@ -5,28 +6,29 @@ Function CleanSchoolName(ByVal txt As String) As String
     Dim forbiddenWords As Variant
     Dim word As Variant
     
-    ' ┘В╪з╪ж┘Е╪й ╪з┘Д┘Г┘Д┘Е╪з╪к ╪з┘Д┘Е┘Е┘Ж┘И╪╣╪й
-    forbiddenWords = Array("┘Е╪п╪▒╪│╪й", "╪з╪╣╪п╪з╪п┘К╪й", "╪л╪з┘Ж┘И┘К╪й", "┘Д┘Д╪и┘Ж╪з╪к", "┘Д┘Д╪и┘Ж┘К┘Ж", "╪и┘Ж┘К┘Ж", "╪и┘Ж╪з╪к", "┘Е╪о╪к┘Д╪╖╪й", "╪з┘Д┘Е╪о╪к┘Д╪╖╪й", "┘Е╪о")
+    ' ▐╟╞у╔ ╟с▀су╟╩ ╟сууфц┌╔
+    forbiddenWords = Array("у╧╤╙╔", "╟┌╧╟╧э╔", "╦╟фцэ╔", "сс╚ф╟╩", "сс╚фэф", "╚фэф", "╚ф╟╩", "╟су╬╩с╪╔", "у╬╩с╪╔", "у╬", "╙╟╧╙", "┌суэ", "╟с┌суэ", "╟╧╚э", "├╧╚э", "╟с╟╧╚э", "╩╤╚э╔ ╬╟╒╔", "┼┌╧╟╧э╔", "╟сухфэ╔", "▐╤╓")
     
-    ' 1. ╪е╪▓╪з┘Д╪й ╪з┘Д┘Ж┘В╪з╪╖ ┘И╪з┘Д╪г╪▒┘В╪з┘Е ┘И╪з┘Д╪▒┘Е┘И╪▓ ┘И╪з┘Д┘Е╪п╪з╪к (┘К╪и┘В┘Й ┘Б┘В╪╖ ╪з┘Д╪╣╪▒╪и┘К ┘И╪з┘Д┘Е╪│╪з┘Б╪й)
+    ' 1. ┼╥╟с╔ ╟сф▐╟╪ ц╟с├╤▐╟у ц╟с╤уц╥ ц╟су╧╟╩ (э╚▐ь ▌▐╪ ╟с┌╤╚э ц╟су╙╟▌╔)
     txt = Replace(txt, ".", "")
-    txt = Replace(txt, "┘А", "")
+    txt = Replace(txt, "?", "")
     txt = Replace(txt, "/", "")
     txt = Replace(txt, "(", "")
     txt = Replace(txt, ")", "")
-    ' ┘К┘Е┘Г┘Ж┘Г ╪е╪╢╪з┘Б╪й ╪з┘Д┘Е╪▓┘К╪п ┘Е┘Ж ╪з┘Д╪▒┘Е┘И╪▓ ┘З┘Ж╪з
+    txt = Replace(txt, "▄", "")
+    ' эу▀ф▀ ┼╓╟▌╔ ╟су╥э╧ уф ╟с╤уц╥ хф╟
     
-    ' 2. ╪е╪▓╪з┘Д╪й ╪з┘Д╪г╪▒┘В╪з┘Е
+    ' 2. ┼╥╟с╔ ╟с├╤▐╟у
     For i = 0 To 9
         txt = Replace(txt, i, "")
     Next i
     
-    ' 3. ╪е╪▓╪з┘Д╪й ╪з┘Д┘Г┘Д┘Е╪з╪к ╪з┘Д┘Е┘Е┘Ж┘И╪╣╪й
+    ' 3. ┼╥╟с╔ ╟с▀су╟╩ ╟сууфц┌╔
     For Each word In forbiddenWords
         txt = Replace(txt, word, "")
     Next word
     
-    ' 4. ╪е╪▓╪з┘Д╪й ╪з┘Д╪н╪▒┘И┘Б ╪з┘Д┘Е┘Б╪▒╪п╪й (┘Е╪л┘Д ╪╣ ╪М ┘Е ╪М ╪л)
+    ' 4. ┼╥╟с╔ ╟с═╤ц▌ ╟су▌╤╧╔ (у╦с ┌ б у б ╦)
     Dim wordsArray() As String
     wordsArray = Split(txt, " ")
     For i = LBound(wordsArray) To UBound(wordsArray)
