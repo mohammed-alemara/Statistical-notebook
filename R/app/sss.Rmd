@@ -355,19 +355,13 @@ by <- "2026-2027"
 
 \newpage
 \subsection{التربية الخاصة}
-```{r, child='file/v1a/setup_v1a.Rmd'}
-```
+
 \newpage
 \subsection{مدارس اليافعين}
-
-```{r, child='file/v1b/setup_v1b.Rmd'}
-```
 
 \newpage
 \subsection{التعليم المسرع}
 
-```{r, child='file/v1c/setup_v1c.Rmd'}
-```
 
 \newpage 
 \thispagestyle{empty}
@@ -394,7 +388,4 @@ by <- "2026-2027"
 \clearpage
 
 \subsection{التعليم الثانوي}
-
-```{r, child='file/v2/setup_v2.Rmd'}
-```
 

@@ -1,53 +1,18 @@
 ```{r setup_v1, include=FALSE}
 #التعليم الابتدائي النظامي
-url <- "https://eu.kobotoolbox.org/api/v2/assets/aXnQNtQ4JkqoZWqiAJgWjb/export-settings/es2DWRs8ATF9X6aQQubQ5pi/data.xlsx"
+url <- "https://kf.kobotoolbox.org/api/v2/assets/aycXgGj28xx2kp266wNKY9/export-settings/esiBoLNm45SQnB55UZCAmNq/data.xlsx"
 tf <- tempfile(fileext = ".xlsx")
-GET(url, write_disk(tf, overwrite = TRUE))
+
+# ضع التوكن الخاص بك هنا
+my_token <- "5d24ece551cba75bfe9278bff0b4d482bc266b75"
+
+# إرسال الطلب مع التوكن
+GET(url, 
+    write_disk(tf, overwrite = TRUE), 
+    add_headers(Authorization = paste("Token", my_token)))
+
+# الآن سيفتح الملف دون أي أخطاء
 df <- read_excel(tf)
 
-df <- df %>% filter(q4 == 1 & q4a == 1)
-
-
 ```
 
-```{r, child='table_v1_1.Rmd'}
-```
-
-```{r, child='table_v1_2.Rmd'}
-```
-
-```{r, child='table_v1_3.Rmd'}
-```
-
-```{r, child='table_v1_4.Rmd'}
-```
-
-```{r, child='table_v1_5.Rmd'}
-```
-
-```{r, child='table_v1_6.Rmd'}
-```
-
-```{r, child='table_v1_7.Rmd'}
-```
-
-```{r, child='table_v1_8.Rmd'}
-```
-
-```{r, child='table_v1_9.Rmd'}
-```
-
-```{r, child='table_v1_10.Rmd'}
-```
-
-```{r, child='table_v1_11.Rmd'}
-```
-
-```{r, child='table_v1_12.Rmd'}
-```
-
-```{r, child='table_v1_13.Rmd'}
-```
-
-```{r, child='table_v1_14.Rmd'}
-```
