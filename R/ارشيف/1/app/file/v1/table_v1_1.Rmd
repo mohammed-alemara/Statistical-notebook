@@ -1,0 +1,20 @@
+```{r table_v1_1, include=FALSE}
+
+c11 <- nrow(df[which(df$q6 == "1" &df$q20 == "1"),])
+
+```
+
+\begin{table}[H]
+\centering
+\caption{جدول البيانات}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}|c|c|ccc|ccc|ccc|ccc|ccc|c|@{}}
+\toprule
+\multirow{2}{*}{البيئة} & عدد     & \multicolumn{3}{c|}{روضة}                                     & \multicolumn{3}{c|}{تمهيدي}                                   & \multicolumn{3}{c|}{المجموع}                                  & \multicolumn{3}{c|}{عدد الشعب}                                    & \multicolumn{3}{c|}{استقلالية الروضة}                           & عدد الرياض   \\ \cmidrule(l){2-18} 
+                        & الرياض  & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & مجموع & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & مجموع & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & مجموع & \multicolumn{1}{c|}{روضة} & \multicolumn{1}{c|}{تمهيدي} & المجموع & \multicolumn{1}{c|}{اصلية} & \multicolumn{1}{c|}{ضيف} & استضافة & الفتح الجديد \\ \midrule
+حضر                     & `r c11` & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}       &         & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}    &         &              \\ \midrule
+ريف                     &         & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}       &         & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}    &         &              \\ \midrule
+المجموع                 &         & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     &       & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}       &         & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}    &         &              \\ \bottomrule
+\end{tabular}
+}
+\end{table}

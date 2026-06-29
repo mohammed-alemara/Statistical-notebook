@@ -1,0 +1,86 @@
+```{r table1, include=FALSE}
+
+
+c11 <- nrow(df[which(df$q6 == "1"),])
+c12 <- nrow(df[which(df$q6 == "2"),])
+c13 <- c11 + c12
+
+c21 <- sum(as.numeric(df$f2_c1_b_2[df$q6 == 1]), na.rm = TRUE)
+c22 <- sum(as.numeric(df$f2_c1_b_2[df$q6 == 2]), na.rm = TRUE)
+c23 <- c21 + c22
+
+c31 <- sum(as.numeric(df$f2_c1_b_3[df$q6 == 1]), na.rm = TRUE)
+c32 <- sum(as.numeric(df$f2_c1_b_3[df$q6 == 2]), na.rm = TRUE)
+c33 <- c31 + c32
+
+c41 <- c21 + c31
+c42 <- c22 + c32
+c43 <- c41 + c42
+
+c51 <- sum(as.numeric(df$f2_c1_c_2[df$q6 == 1]), na.rm = TRUE)
+c52 <- sum(as.numeric(df$f2_c1_c_2[df$q6 == 2]), na.rm = TRUE)
+c53 <- c51 + c52
+
+c61 <- sum(as.numeric(df$f2_c1_c_3[df$q6 == 1]), na.rm = TRUE)
+c62 <- sum(as.numeric(df$f2_c1_c_3[df$q6 == 2]), na.rm = TRUE)
+c63 <- c61 + c62
+
+c71 <- c51 + c61
+c72 <- c52 + c62
+c73 <- c71 + c72
+
+c81 <- c21 + c51
+c82 <- c22 + c52
+c83 <- c23 + c53
+
+c91 <- c21 + c51
+c92 <- c22 + c52
+c93 <- c23 + c53
+
+c101 <- c41 + c71
+c102 <- c42 + c72
+c103 <- c43 + c73
+
+c111 <- sum(as.numeric(df$f2_c2_b_2[df$q6 == 1]), na.rm = TRUE)
+c112 <- sum(as.numeric(df$f2_c2_b_2[df$q6 == 2]), na.rm = TRUE)
+c113 <- c111 + c112
+
+c121 <- sum(as.numeric(df$f2_c2_c_2[df$q6 == 1]), na.rm = TRUE)
+c122 <- sum(as.numeric(df$f2_c2_c_2[df$q6 == 2]), na.rm = TRUE)
+c123 <- c121 + c122
+
+c131 <- c111 + c121
+c132 <- c112 + c122
+c133 <- c113 + c123
+
+c141 <- nrow(df[which(df$q6 == "1" & df$q22 == "1"), ])
+c142 <- nrow(df[which(df$q6 == "2" & df$q22 == "1"), ])
+c143 <- c141 + c142
+
+c151 <- nrow(df[which(df$q6 == "1" & df$q22 == "2"), ])
+c152 <- nrow(df[which(df$q6 == "2" & df$q22 == "2"), ])
+c153 <- c151 + c152
+
+c161 <- nrow(df[which(df$q6 == "1" & df$q22 == "3"), ])
+c162 <- nrow(df[which(df$q6 == "2" & df$q22 == "3"), ])
+c163 <- c161 + c162
+
+```
+
+```{=latex}
+\begin{table}[H]
+\centering
+\Large
+\captionsetup{font={Large,bf}, skip=15pt}
+\caption{جدول البيانات}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|c|ccc|ccc|ccc|ccc|ccc|c|}
+\hline
+\multirow{2}{*}{البيئة} & عدد         & \multicolumn{3}{c|}{روضة}                                                         & \multicolumn{3}{c|}{تمهيدي}                                                       & \multicolumn{3}{c|}{المجموع}                                                       & \multicolumn{3}{c|}{عدد الشعب}                                                       & \multicolumn{3}{c|}{استقلالية الروضة}                                                & عدد الرياض   \\ \cline{2-18} 
+                        & الرياض      & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع       & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع       & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع        & \multicolumn{1}{c|}{روضة}         & \multicolumn{1}{c|}{تمهيدي}       & المجموع      & \multicolumn{1}{c|}{اصلية}        & \multicolumn{1}{c|}{ضيف}          & استضافة      & الفتح الجديد \\ \hline
+حضر                     & `r ad(c11)` & \multicolumn{1}{c|}{`r ad(c21)`} & \multicolumn{1}{c|}{`r ad(c31)`} & `r ad(c41)` & \multicolumn{1}{c|}{`r ad(c51)`} & \multicolumn{1}{c|}{`r ad(c61)`} & `r ad(c71)` & \multicolumn{1}{c|}{`r ad(c81)`} & \multicolumn{1}{c|}{`r ad(c91)`} & `r ad(c101)` & \multicolumn{1}{c|}{`r ad(c111)`} & \multicolumn{1}{c|}{`r ad(c121)`} & `r ad(c131)` & \multicolumn{1}{c|}{`r ad(c141)`} & \multicolumn{1}{c|}{`r ad(c151)`} & `r ad(c161)` &              \\ \hline
+ريف                     & `r ad(c12)` & \multicolumn{1}{c|}{`r ad(c22)`} & \multicolumn{1}{c|}{`r ad(c32)`} & `r ad(c42)` & \multicolumn{1}{c|}{`r ad(c52)`} & \multicolumn{1}{c|}{`r ad(c62)`} & `r ad(c72)` & \multicolumn{1}{c|}{`r ad(c82)`} & \multicolumn{1}{c|}{`r ad(c92)`} & `r ad(c102)` & \multicolumn{1}{c|}{`r ad(c112)`} & \multicolumn{1}{c|}{`r ad(c122)`} & `r ad(c132)` & \multicolumn{1}{c|}{`r ad(c142)`} & \multicolumn{1}{c|}{`r ad(c152)`} & `r ad(c162)` &              \\ \hline
+المجموع                 & `r ad(c13)` & \multicolumn{1}{c|}{`r ad(c23)`} & \multicolumn{1}{c|}{`r ad(c33)`} & `r ad(c43)` & \multicolumn{1}{c|}{`r ad(c53)`} & \multicolumn{1}{c|}{`r ad(c63)`} & `r ad(c73)` & \multicolumn{1}{c|}{`r ad(c83)`} & \multicolumn{1}{c|}{`r ad(c93)`} & `r ad(c103)` & \multicolumn{1}{c|}{`r ad(c113)`} & \multicolumn{1}{c|}{`r ad(c123)`} & `r ad(c133)` & \multicolumn{1}{c|}{`r ad(c143)`} & \multicolumn{1}{c|}{`r ad(c153)`} & `r ad(c163)` &              \\ \hline
+\end{tabular}%
+\end{table}
+```
