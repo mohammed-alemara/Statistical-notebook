@@ -13,6 +13,7 @@ output:
 ```{r, include=FALSE}
 library(httr)
 library(readxl)
+library(dplyr)
 url <- "https://kf.kobotoolbox.org/api/v2/assets/aycXgGj28xx2kp266wNKY9/export-settings/esiBoLNm45SQnB55UZCAmNq/data.xlsx"
 tf <- tempfile(fileext = ".xlsx")
 
@@ -22,11 +23,26 @@ GET(url,
     write_disk(tf, overwrite = TRUE), 
     add_headers(Authorization = paste("Token", my_token)))
 
+
 df <- read_excel(tf)
+
+
+
+
 # دالة تحويل الارقام الانكليزية الى العربية
 ad <- function(x){
   chartr("0123456789", "٠١٢٣٤٥٦٧٨٩", as.character(x))
 }
+
+ay <- "2026/2027"
+by <- "2027/2026"
+
+
+cat(
+  paste0("\\fancyfoot[R]{\\large\\bfseries الإحصاء السنوي للعام الدراسي ", ad(by), "}"),
+  file = "footer.tex"
+)
+
 
 ```
 ```{=latex}
@@ -36,5 +52,13 @@ ad <- function(x){
 
 ```{r, child='file//table1.Rmd'}
 ```
+```{r, child='file//table2.Rmd'}
+```
+```{r, child='file//table3.Rmd'}
+```
+```{r, child='file//table4.Rmd'}
+```
+
+
 
 

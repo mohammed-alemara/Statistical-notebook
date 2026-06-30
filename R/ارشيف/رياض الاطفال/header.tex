@@ -4,13 +4,128 @@
 \setotherlanguage{english}
 \newfontfamily\arabicfont[Script=Arabic]{Arial}
 \setmainfont{Amiri}
+
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{geometry}
-\geometry{a4paper,landscape,left=1cm,right=1cm,bottom=1cm,top=0.5cm,includehead,headheight=35pt,headsep=0pt,footskip=25pt}
+
+\geometry{
+    a4paper,
+    landscape,
+    left=1cm,
+    right=1cm,
+    bottom=1cm,
+    top=0.5cm,
+    includehead,
+    headheight=35pt,
+    headsep=0pt,
+    footskip=25pt
+}
+
 \usepackage{caption}
 \gappto\captionsarabic{\renewcommand{\chaptername}{الفصل}}
 
+%==================================================
+% Header & Footer
+%==================================================
 
+\usepackage{fancyhdr}
+
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{12pt}
+\setlength{\footskip}{25pt}
+
+%==================================================
+% Section - Subsection بدون ترقيم
+%==================================================
+
+\makeatletter
+
+\newcommand{\CurrentSection}{}
+\newcommand{\CurrentSubsection}{}
+
+\renewcommand{\sectionmark}[1]{%
+    \gdef\CurrentSection{#1}%
+    \gdef\CurrentSubsection{}%
+    \markright{\CurrentSection}%
+}
+
+\renewcommand{\subsectionmark}[1]{%
+    \gdef\CurrentSubsection{#1}%
+    \markright{\CurrentSection\ - \CurrentSubsection}%
+}
+
+\makeatother
+
+%==================================================
+% الرأس والتذييل
+%==================================================
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% الرأس - يسار
+\fancyhead[L]{%
+    \large\bfseries\nouppercase{\rightmark}
+}
+
+% الرأس - يمين
+\fancyhead[R]{%
+    \large\bfseries
+    المديرية العامة للتربية في محافظة النجف الاشرف/ قسم التخطيط التربوي/ شعبة الاحصاء
+}
+
+% التذييل
+\fancyfoot[L]{%
+    \large\bfseries\thepage
+}
+
+\fancyfoot[C]{}
+
+\input{footer.tex}
+
+% خطوط الرأس والتذييل
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{2pt}
+
+%==================================================
+% الصفحة الأولى (plain)
+%==================================================
+
+\fancypagestyle{plain}{%
+    \fancyhf{}
+
+    % الرأس - يسار
+    \fancyhead[L]{%
+        \large\bfseries\nouppercase{\rightmark}
+    }
+
+    % الرأس - يمين
+    \fancyhead[R]{%
+        \large\bfseries
+        المديرية العامة للتربية في محافظة النجف الاشرف/قسم التخطيط التربوي/شعبة الاحصاء
+    }
+
+    % التذييل
+    \fancyfoot[L]{%
+        \large\bfseries\thepage
+    }
+
+    \fancyfoot[C]{}
+
+    \input{footer.tex}
+
+    \renewcommand{\headrulewidth}{2pt}
+    \renewcommand{\footrulewidth}{2pt}
+}
+
+%==================================================
+% تطبيق التنسيق على أول صفحة أيضاً
+%==================================================
+
+\AtBeginDocument{%
+    \pagestyle{fancy}
+    \thispagestyle{fancy}
+}

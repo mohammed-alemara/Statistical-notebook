@@ -1,0 +1,32 @@
+```{r table2, include=FALSE}
+df <- df %>% filter(q18 == 1 & q4 == 1)
+
+c11 <- nrow(df[which(df$app1_4 == "1"),])
+c21 <- nrow(df[which(df$app1_3 == "1"),])
+c31 <- nrow(df[which(df$app1_6 == "1"),])
+c41 <- nrow(df[which(df$app1_7 == "1"),])
+c51 <- 0
+c61 <- 0
+c71 <- 0
+c81 <- nrow(df[which(df$app1_5 == "1"),])
+c91 <- nrow(df[which(df$q23 == "1"),])
+c101 <- nrow(df[which(df$q23 == "2"),])
+c111 <- nrow(df[which(df$q23 == "3"),])
+c121 <- nrow(df[which(df$q23 == "4"),])
+```
+
+```{=latex}
+\begin{table}[H]
+\centering
+\Large
+\captionsetup{font={Large,bf}, skip=15pt}
+\caption{رياض الاطفال `r ad(by)`}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{cccccccccccc}
+\multicolumn{8}{r}{عدد رياض الاطفال المشمولة  :-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               & \multicolumn{4}{r}{هل الروضة}                                                                                                                                                                                                                                                                                                                                                                              \\ \hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}ارشاد\\ تربوي\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}تدريس\\ حاسوب\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{خدمة انترنت}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}تدريس اللغة\\ الانكليزية\end{tabular}}} & \multicolumn{3}{c|}{تدريس لغات محلية}                                                                  & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}تغذية\\ مدرسية\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}غير\\ مزدوجة\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}مزدوجة\\ على نفسها\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}مزدوجة\\ مع اخرى\end{tabular}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}مزدوجة مع نفسها \\ ومع اخرى\end{tabular}}} \\ \cline{5-7}
+\multicolumn{1}{|c|}{}                                                                       & \multicolumn{1}{c|}{}                                                                       & \multicolumn{1}{c|}{}                             & \multicolumn{1}{c|}{}                                                                                  & \multicolumn{1}{c|}{الكردية}     & \multicolumn{1}{c|}{التركمانية}  & \multicolumn{1}{c|}{السريانية}   & \multicolumn{1}{c|}{}                                                                        & \multicolumn{1}{c|}{}                                                                      & \multicolumn{1}{c|}{}                                                                            & \multicolumn{1}{c|}{}                                                                          & \multicolumn{1}{c|}{}                                                                                     \\ \hline
+\multicolumn{1}{|c|}{`r ad(c11)`}                                                            & \multicolumn{1}{c|}{`r ad(c21)`}                                                            & \multicolumn{1}{c|}{`r ad(c31)`}                  & \multicolumn{1}{c|}{`r ad(c41)`}                                                                       & \multicolumn{1}{c|}{`r ad(c51)`} & \multicolumn{1}{c|}{`r ad(c61)`} & \multicolumn{1}{c|}{`r ad(c71)`} & \multicolumn{1}{c|}{`r ad(c81)`}                                                             & \multicolumn{1}{c|}{`r ad(c91)`}                                                           & \multicolumn{1}{c|}{`r ad(c101)`}                                                                & \multicolumn{1}{c|}{`r ad(c111)`}                                                              & \multicolumn{1}{c|}{`r ad(c121)`}                                                                         \\ \hline
+\end{tabular}%
+\end{table}
+```
