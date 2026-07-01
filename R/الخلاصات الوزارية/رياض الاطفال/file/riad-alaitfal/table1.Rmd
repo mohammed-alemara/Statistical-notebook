@@ -1,5 +1,5 @@
 ```{r table1, include=FALSE}
-df <- df %>% filter(q18 == 1 & q4 == 1)
+
 
 c11 <- nrow(df[which(df$q6 == "1"),])
 c12 <- nrow(df[which(df$q6 == "2"),])
@@ -75,8 +75,7 @@ c173 <- c171 + c172
 \begin{table}[H]
 \centering
 \Large
-\captionsetup{font={Large,bf}, skip=15pt}
-\caption{عدد الرياض والاطفال المسجلين والشعب حسب المرحلة والبيئة والجنس للعام الدراسي `r ad(by)`}
+\caption{عدد الرياض والاطفال المسجلين والشعب حسب المرحلة والبيئة والجنس}
 \renewcommand{\arraystretch}{1.6}
 \begin{tabular}{|c|c|ccc|ccc|ccc|ccc|ccc|c|}
 \hline

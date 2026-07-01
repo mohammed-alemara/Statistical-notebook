@@ -1,5 +1,4 @@
 ```{r table3, include=FALSE}
-df <- df %>% filter(q18 == 1 & q4 == 1)
 
 c11 <- sum(as.numeric(df$emp1_b_3[df$q6 == 1]), na.rm = TRUE)
 c12 <- sum(as.numeric(df$emp1_b_3[df$q6 == 2]), na.rm = TRUE)
@@ -67,8 +66,7 @@ c153 <- c151 + c152
 \begin{table}[H]
 \centering
 \Large
-\captionsetup{font={Large,bf}, skip=15pt}
-\caption{عدد المعلمات حسب العنوان الوظيفي والشهادة والبيئة `r ad(by)`}
+\caption{عدد المعلمات حسب العنوان الوظيفي والشهادة والبيئة}
 \renewcommand{\arraystretch}{1.6}
 \begin{tabular}{|cccccc|ccccccccccc|}
 \hline

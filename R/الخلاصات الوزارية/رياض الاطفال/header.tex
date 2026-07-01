@@ -24,7 +24,15 @@
     footskip=25pt
 }
 
+%==================================================
+% التحكم في كابشن الجداول وزيادة الارتفاع عن الجدول
+%==================================================
 \usepackage{caption}
+\captionsetup[table]{
+    font={Large,bf},
+    skip=5pt
+}
+
 \gappto\captionsarabic{\renewcommand{\chaptername}{الفصل}}
 
 %==================================================
@@ -129,3 +137,11 @@
     \pagestyle{fancy}
     \thispagestyle{fancy}
 }
+
+%==================================================
+% تغيير حجم السكشن
+%==================================================
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries\color{blue}}
+\titleformat*{\subsection}{\Large\bfseries\color{blue}}
+\titleformat*{\subsubsection}{\Large\bfseries\color{blue}}

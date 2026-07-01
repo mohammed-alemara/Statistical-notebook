@@ -1,0 +1,25 @@
+```{r table7, include=FALSE}
+
+
+c11 <- sum(as.numeric(df$emp6_6), na.rm = TRUE)
+c12 <- sum(as.numeric(df$emp6_8), na.rm = TRUE)
+c13 <- sum(as.numeric(df$emp6_10), na.rm = TRUE)
+
+```
+
+```{=latex}
+\begin{table}[H]
+\centering
+\Large
+\caption[]{عدد اعضاء الهيئة التعليمية المشاركين في الدورات التدريبية للعام السابق}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|c|}
+\hline
+الجنس   & عدد المعلمات \\ \hline
+ذكور    & `r ad(c11)`  \\ \hline
+اناث    & `r ad(c12)`  \\ \hline
+المجموع & `r ad(c13)`  \\ \hline
+\end{tabular}%
+\end{table}
+```
+

@@ -1,5 +1,4 @@
 ```{r table2, include=FALSE}
-df <- df %>% filter(q18 == 1 & q4 == 1)
 
 c11 <- nrow(df[which(df$app1_4 == "1"),])
 c21 <- nrow(df[which(df$app1_3 == "1"),])
@@ -19,8 +18,7 @@ c121 <- nrow(df[which(df$q23 == "4"),])
 \begin{table}[H]
 \centering
 \Large
-\captionsetup{font={Large,bf}, skip=15pt}
-\caption{رياض الاطفال `r ad(by)`}
+\caption{رياض الاطفال}
 \renewcommand{\arraystretch}{1.6}
 \begin{tabular}{cccccccccccc}
 \multicolumn{8}{r}{عدد رياض الاطفال المشمولة  :-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               & \multicolumn{4}{r}{هل الروضة}                                                                                                                                                                                                                                                                                                                                                                              \\ \hline

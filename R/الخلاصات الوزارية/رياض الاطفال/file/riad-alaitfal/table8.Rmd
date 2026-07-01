@@ -1,0 +1,40 @@
+```{r table8, include=FALSE}
+
+
+c11 <- sum(as.numeric(df$emp4_b_2), na.rm = TRUE)
+c21 <- sum(as.numeric(df$emp4_b_3), na.rm = TRUE)
+
+c31 <- sum(as.numeric(df$emp4_c_2), na.rm = TRUE)
+c41 <- sum(as.numeric(df$emp4_c_3), na.rm = TRUE)
+
+c51 <- sum(as.numeric(df$emp4_d_2), na.rm = TRUE)
+c61 <- sum(as.numeric(df$emp4_d_3), na.rm = TRUE)
+
+c71 <- sum(as.numeric(df$emp4_e_2), na.rm = TRUE)
+c81 <- sum(as.numeric(df$emp4_e_3), na.rm = TRUE)
+
+c91 <- 0
+c101 <- 0
+
+c111 <- sum(as.numeric(df$emp4_k_2_calc), na.rm = TRUE)
+c121 <- sum(as.numeric(df$emp4_k_3_calc), na.rm = TRUE)
+
+c131 <- sum(as.numeric(df$emp4_k_4_calc), na.rm = TRUE)
+
+```
+
+```{=latex}
+\begin{table}[H]
+\centering
+\Large
+\caption[]{عدد اعضاء الهيئة التعليمية المشاركين في الدورات التدريبية للعام السابق}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|cc|cc|cc|cc|cc|ccc|}
+\hline
+\multicolumn{2}{|c|}{`r ad(5)` سنوات فأقل}      & \multicolumn{2}{c|}{`r ad(6)`-`r ad(10)`}      & \multicolumn{2}{c|}{`r ad(11)`-`r ad(15)`}     & \multicolumn{2}{c|}{`r ad(16)`-`r ad(20)`}     & \multicolumn{2}{c|}{اكثر من `r ad(21)`}         & \multicolumn{3}{c|}{المجموع}                                                         \\ \hline
+\multicolumn{1}{|c|}{ذكور}        & اناث        & \multicolumn{1}{c|}{ذكور}        & اناث        & \multicolumn{1}{c|}{ذكور}        & اناث        & \multicolumn{1}{c|}{ذكور}        & اناث        & \multicolumn{1}{c|}{ذكور}        & اناث         & \multicolumn{1}{c|}{ذكور}         & \multicolumn{1}{c|}{اناث}         & المجموع      \\ \hline
+\multicolumn{1}{|c|}{`r ad(c11)`} & `r ad(c21)` & \multicolumn{1}{c|}{`r ad(c31)`} & `r ad(c41)` & \multicolumn{1}{c|}{`r ad(c51)`} & `r ad(c61)` & \multicolumn{1}{c|}{`r ad(c71)`} & `r ad(c81)` & \multicolumn{1}{c|}{`r ad(c91)`} & `r ad(c101)` & \multicolumn{1}{c|}{`r ad(c111)`} & \multicolumn{1}{c|}{`r ad(c121)`} & `r ad(c131)` \\ \hline
+\end{tabular}%
+\end{table}
+```
+

@@ -1,0 +1,57 @@
+```{r table4, include=FALSE}
+
+c11 <- sum(as.numeric(df$f2_c3_b_2), na.rm = TRUE)
+c12 <- 0
+c13 <- c11
+
+c21 <- sum(as.numeric(df$f2_c3_b_3), na.rm = TRUE)
+c22 <- 0
+c23 <- c21
+
+c31 <- c11 + c21
+c32 <- 0
+c33 <- c31
+
+c41 <- 0
+c42 <- sum(as.numeric(df$f2_c3_c_2), na.rm = TRUE)
+c43 <- c42
+
+c51 <- 0
+c52 <- sum(as.numeric(df$f2_c3_c_3), na.rm = TRUE)
+c53 <- c52
+
+c61 <- 0
+c62 <- c42 + c52
+c63 <- c62
+
+c71 <- c11 + c41
+c72 <- c12 + c42
+c73 <- c13 + c43
+
+c81 <- c21 + c51
+c82 <- c22 + c52
+c83 <- c23 + c53
+
+c91 <- c31 + c61
+c92 <- c32 + c62
+c93 <- c33 + c63
+
+
+```
+
+```{=latex}
+\begin{table}[H]
+\centering
+\Large
+\caption{عدد الأطفال التاركين حسب الجنس والمرحلة والعمر}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|ccc|ccc|ccc|}
+\hline
+\multirow{2}{*}{}      & \multicolumn{3}{c|}{روضة}                                                         & \multicolumn{3}{c|}{تمهيدي}                                                       & \multicolumn{3}{c|}{المجموع}                                                      \\ \cline{2-10} 
+                       & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع       & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع       & \multicolumn{1}{c|}{بنون}        & \multicolumn{1}{c|}{بنات}        & مجموع       \\ \hline
+روضة `r ad(4)` سنوات   & \multicolumn{1}{c|}{`r ad(c11)`} & \multicolumn{1}{c|}{`r ad(c21)`} & `r ad(c31)` & \multicolumn{1}{c|}{`r ad(c41)`} & \multicolumn{1}{c|}{`r ad(c51)`} & `r ad(c61)` & \multicolumn{1}{c|}{`r ad(c71)`} & \multicolumn{1}{c|}{`r ad(c81)`} & `r ad(c91)` \\ \hline
+تمهيدي `r ad(5)` سنوات & \multicolumn{1}{c|}{`r ad(c12)`} & \multicolumn{1}{c|}{`r ad(c22)`} & `r ad(c32)` & \multicolumn{1}{c|}{`r ad(c42)`} & \multicolumn{1}{c|}{`r ad(c52)`} & `r ad(c62)` & \multicolumn{1}{c|}{`r ad(c72)`} & \multicolumn{1}{c|}{`r ad(c82)`} & `r ad(c92)` \\ \hline
+المجموع                & \multicolumn{1}{c|}{`r ad(c13)`} & \multicolumn{1}{c|}{`r ad(c23)`} & `r ad(c33)` & \multicolumn{1}{c|}{`r ad(c43)`} & \multicolumn{1}{c|}{`r ad(c53)`} & `r ad(c63)` & \multicolumn{1}{c|}{`r ad(c73)`} & \multicolumn{1}{c|}{`r ad(c83)`} & `r ad(c93)` \\ \hline
+\end{tabular}%
+\end{table}
+```
