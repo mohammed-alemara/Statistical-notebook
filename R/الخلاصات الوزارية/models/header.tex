@@ -3,12 +3,25 @@
 \setdefaultlanguage[numerals=eastern]{arabic}
 \setotherlanguage{english}
 \newfontfamily\arabicfont[Script=Arabic]{Arial}
-\setmainfont{Amiri}
+\setmainfont{Arial}
 
-\usepackage{booktabs}
+%==================================================
+% دمج عدة صفوف في خلية واحدة داخل الجداول
+%==================================================
 \usepackage{multirow}
+%==================================================
+% إدراج الصور والتحكم في حجمها وتدويرها
+%==================================================
 \usepackage{graphicx}
+
+%==================================================
+% دعم الخيار [H] لتثبيت الجداول والأشكال في مكانها
+%==================================================
 \usepackage{float}
+
+%==================================================
+% ضبط هوامش الصفحة وأبعاد الورقة
+%==================================================
 \usepackage{geometry}
 
 \geometry{
@@ -33,7 +46,6 @@
     skip=5pt
 }
 
-\gappto\captionsarabic{\renewcommand{\chaptername}{الفصل}}
 
 %==================================================
 % Header & Footer
@@ -87,12 +99,12 @@
 
 % التذييل
 \fancyfoot[L]{%
-    \large\bfseries\thepage
+    \Large\bfseries\thepage
 }
 
 \fancyfoot[C]{}
 
-\input{footer.tex}
+\input{models//footer.tex}
 
 % خطوط الرأس والتذييل
 \renewcommand{\headrulewidth}{2pt}
@@ -118,7 +130,7 @@
 
     % التذييل
     \fancyfoot[L]{%
-        \large\bfseries\thepage
+        \Large\bfseries\thepage
     }
 
     \fancyfoot[C]{}
@@ -145,3 +157,21 @@
 \titleformat*{\section}{\Large\bfseries\color{blue}}
 \titleformat*{\subsection}{\Large\bfseries\color{blue}}
 \titleformat*{\subsubsection}{\Large\bfseries\color{blue}}
+
+%==================================================
+% ادراج ملفات بي دي اف
+%==================================================
+\usepackage{pdfpages}
+
+%==================================================
+% التحكم في ارتفاع الجداول
+%==================================================
+\renewcommand{\arraystretch}{1}
+
+%==================================================
+% الحزم الخاصة بالجداول
+%==================================================
+\usepackage{color}
+\usepackage{rotating}
+\usepackage{tabularray}
+\definecolor{Silver}{rgb}{0.752,0.752,0.752}
