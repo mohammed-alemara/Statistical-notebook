@@ -1,7 +1,5 @@
 ```{r table1, include=FALSE}
-
-
-
+c11 <- sum(as.numeric(df$gov), na.rm = TRUE)
 ```
 
 ```{=latex}
@@ -14,10 +12,10 @@
 \hline
 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}الموقع\\ البيئي\end{tabular}} & \multicolumn{4}{c|}{عدد المدارس} & \multicolumn{3}{c|}{\begin{tabular}[c]{@{}c@{}}عدد التلامذة   المقبولين ( الجدد ) \\ في الصف الاول الابتدائي\end{tabular}} & \multicolumn{3}{c|}{عدد التلامذة الموجودين} & \multicolumn{3}{c|}{عدد اعضاء الهيئة التعليمية} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}عدد المدارس\\ حسب الاستقلالية\end{tabular}} & \multicolumn{5}{c|}{عدد المدارس حسب الدوام} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}مدارس\\ الفتح\\ الجديد\end{tabular}} \\ \cline{2-21}
  & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & \multicolumn{1}{c|}{مختلطة} & المجموع & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & المجموع & \multicolumn{1}{c|}{بنون} & \multicolumn{1}{c|}{بنات} & المجموع & \multicolumn{1}{c|}{ذكور} & \multicolumn{1}{c|}{اناث} & المجموع & \multicolumn{1}{c|}{اصلية} & ضيف & \multicolumn{1}{c|}{صباحاً} & \multicolumn{1}{c|}{ظهرا} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}صباحا\\ وظهرا\end{tabular}} & \multicolumn{1}{c|}{مساءاً} & المجموع &  \\ \hline
-حضر & \multicolumn{1}{c|}{228} & \multicolumn{1}{c|}{225} & \multicolumn{1}{c|}{9} & 462 & \multicolumn{1}{c|}{12343} & \multicolumn{1}{c|}{13595} & 25938 & \multicolumn{1}{c|}{86188} & \multicolumn{1}{c|}{89893} & 176081 & \multicolumn{1}{c|}{2121} & \multicolumn{1}{c|}{6582} & 8703 & \multicolumn{1}{c|}{263} & 199 & \multicolumn{1}{c|}{259} & \multicolumn{1}{c|}{199} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{0} & 462 & 8 \\ \hline
-ريف & \multicolumn{1}{c|}{70} & \multicolumn{1}{c|}{68} & \multicolumn{1}{c|}{129} & 267 & \multicolumn{1}{c|}{6803} & \multicolumn{1}{c|}{6554} & 13357 & \multicolumn{1}{c|}{45792} & \multicolumn{1}{c|}{42951} & 88743 & \multicolumn{1}{c|}{2976} & \multicolumn{1}{c|}{3745} & 6721 & \multicolumn{1}{c|}{205} & 62 & \multicolumn{1}{c|}{201} & \multicolumn{1}{c|}{63} & \multicolumn{1}{c|}{3} & \multicolumn{1}{c|}{0} & 267 & 0 \\ \hline
-المجموع & \multicolumn{1}{c|}{298} & \multicolumn{1}{c|}{293} & \multicolumn{1}{c|}{138} & 729 & \multicolumn{1}{c|}{19146} & \multicolumn{1}{c|}{20149} & 39295 & \multicolumn{1}{c|}{131980} & \multicolumn{1}{c|}{132844} & 264824 & \multicolumn{1}{c|}{5097} & \multicolumn{1}{c|}{10327} & 15424 & \multicolumn{1}{c|}{468} & 261 & \multicolumn{1}{c|}{460} & \multicolumn{1}{c|}{262} & \multicolumn{1}{c|}{7} & \multicolumn{1}{c|}{0} & 729 & 8 \\ \hline
-\end{tabular}
+حضر & \multicolumn{1}{c|}{`r ad(c11)`} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  &  \\ \hline
+ريف & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  &  \\ \hline
+المجموع & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} &  & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} &  &  \\ \hline
+\end{tabular}%
 }
 \end{table}
 ```
