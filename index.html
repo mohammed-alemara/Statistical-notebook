@@ -85,7 +85,7 @@
 
     .button-group {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 12px;
     }
 
@@ -163,8 +163,12 @@
     .btn-vocational { background: linear-gradient(45deg, #8e44ad, #9b59b6); box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3); animation-delay: 0.8s; }
     .btn-vocational:hover { background: linear-gradient(45deg, #71338a, #8e44ad); box-shadow: 0 6px 20px rgba(142, 68, 173, 0.4); }
 
-    .btn-institutes { background: linear-gradient(45deg, #c0392b, #e74c3c); box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3); animation-delay: 1.0s; grid-column: span 2; }
-    .btn-institutes:hover { background: linear-gradient(45deg, #a93226, #c0392b); box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4); }
+    .btn-institutes {
+  background: linear-gradient(45deg, #c0392b, #e74c3c);
+  box-shadow: 0 4px 15px rgba(192,57,43,.3);
+  animation-delay: 1s;
+}
+.btn-institutes:hover { background: linear-gradient(45deg, #a93226, #c0392b); box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4); }
 
     .button:active {
       transform: translateY(-1px);
@@ -228,21 +232,13 @@
     </div>
 
     <div class="button-group">
-      <a class="button btn-kindergarten" href="https://ee.kobotoolbox.org/x/pSFzgn5D">
-        <i class="fas fa-child"></i>
-        رياض أطفال
-      </a>
       <a class="button btn-primary" href="https://ee.kobotoolbox.org/x/WB2E3R2n">
-        <i class="fas fa-book-open"></i>
-        المدارس الابتدائية
-      </a>
-      <a class="button btn-secondary" href="https://ee.kobotoolbox.org/x/lbH2kcZS">
-        <i class="fas fa-graduation-cap"></i>
-        المدارس الثانوية
+        <i class="fas fa-school"></i>
+        رياض الأطفال - الابتدائي - الثانوي
       </a>
       <a class="button btn-vocational" href="https://ee-eu.kobotoolbox.org/x/VOCATIONAL_FORM_URL">
         <i class="fas fa-tools"></i>
-        المهني
+        التعليم المهني
       </a>
       <a class="button btn-institutes" href="https://ee-eu.kobotoolbox.org/x/INSTITUTES_FORM_URL">
         <i class="fas fa-university"></i>
